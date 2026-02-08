@@ -774,6 +774,141 @@
         }
 
         /* Testimonials Section */
+        /* Testimonials Section with Auto-Slide */
+        .testimonials-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .testimonials-container {
+            display: flex;
+            transition: transform 0.8s ease;
+            width: calc(300% + 80px);
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.8s ease;
+            width: 100%;
+        }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+            animation: slideInFromRight 0.8s ease forwards;
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .testimonial-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .client-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .client-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #FFD700;
+            margin: 10px 0;
+        }
+
+        .rating i {
+            margin-right: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 10px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 10px;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .testimonial-nav button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            background: var(--border-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testimonial-nav button.active {
+            background: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        .testimonial-nav button:hover {
+            background: var(--accent-secondary);
+            transform: scale(1.1);
+        }
+
         .testimonial-header {
             display: flex;
             align-items: center;
@@ -1950,6 +2085,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -1994,6 +2130,7 @@
                 transform: scale(1);
                 box-shadow: 0 5px 20px rgba(58, 134, 255, 0.3);
             }
+
             100% {
                 transform: scale(1.05);
                 box-shadow: 0 8px 25px rgba(131, 56, 236, 0.4);
@@ -2260,7 +2397,8 @@
                 <i class="fas fa-check"></i>
             </div>
             <h2 class="popup-title">Message Sent Successfully!</h2>
-            <p class="popup-message">Thank you for reaching out! I have received your message and will get back to you within 24 hours. I appreciate your interest in my work.</p>
+            <p class="popup-message">Thank you for reaching out! I have received your message and will get back to you
+                within 24 hours. I appreciate your interest in my work.</p>
             <button class="popup-button" id="popupClose">Close</button>
         </div>
     </div>
@@ -2338,7 +2476,7 @@
                     My career goal is to work professionally in the industry through a job, while also pursuing
                     freelancing to gain real-world experience, expand my skill set, and deliver impactful digital
                     solutions.<br></p>
-                
+
                 <!-- CV Download Button -->
                 <a href="cv/MuhammadOkashaResume new.pdf" class="cv-download-btn" id="downloadCV">
                     <i class="fas fa-download"></i> Download CV
@@ -2367,62 +2505,64 @@
             <div class="education-container">
                 <div class="education-item">
                     <h3>Matriculation (Science)</h3>
+                    <p> Certification by <b>BAQAI CADET COLLEGE</b></p>
+
                     <div class="education-duration">
-                        <i class="far fa-calendar"></i> 2018 - 2020
+                        <i class="far fa-calendar"></i> 2020 - 2022
                     </div>
                     <p class="education-details">
-                        Completed Matriculation with Science subjects from a recognized board. Focused on Physics, Chemistry, Mathematics, and Computer Science which laid the foundation for technical education.
+                        Completed Matriculation with Science subjects from a recognized board. Focused on Physics,
+                        Chemistry, Mathematics, and Computer Science which laid the foundation for technical education.
                     </p>
                 </div>
 
                 <div class="education-item">
                     <h3>Intermediate (Pre-Engineering)</h3>
+                    <p> Certification by <b>Army Public College Saddar</b></p>
+
                     <div class="education-duration">
-                        <i class="far fa-calendar"></i> 2020 - 2022
+                        <i class="far fa-calendar"></i> 2022 - 2024
                     </div>
                     <p class="education-details">
-                        Completed Intermediate in Pre-Engineering with focus on Mathematics, Physics, and Chemistry. Developed strong analytical and problem-solving skills during this period.
+                        Completed Intermediate in Pre-Engineering with focus on Mathematics, Physics, and Chemistry.
+                        Developed strong analytical and problem-solving skills during this period.
                     </p>
                 </div>
 
                 <div class="education-item">
-                    <h3>Diploma in Web Development (Aptech)</h3>
+                    <h3>Diploma in Web Development [ACCP (AI)]</h3>
+                    <p> Certification by <b>Aptech Learning</b></p>
                     <div class="education-duration">
-                        <i class="far fa-calendar"></i> 2023 - Present
+                        <i class="far fa-calendar"></i> 2024 - Present
                     </div>
                     <p class="education-details">
-                        Currently pursuing professional diploma in Web Development from Aptech. Learning modern web technologies including HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, and backend fundamentals. Working on practical projects to build portfolio and gain hands-on experience.
+                        Currently pursuing professional diploma in Web Development from Aptech. Learning modern web
+                        technologies including HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, and backend
+                        fundamentals. Working on practical projects to build portfolio and gain hands-on experience.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Work Experience Section -->
+        <!-- Work Experience Section -->
         <section id="experience">
             <h2 class="section-title">Work Experience</h2>
             <div class="experience-container">
                 <div class="experience-item">
-                    <h3>Freelance Web Developer</h3>
+                    <h3>Web Developer </h3>
+                    <p>at Aptech Learning</p>
                     <div class="experience-duration">
-                        <i class="far fa-calendar"></i> 2022 - Present
+                        <i class="far fa-calendar"></i> 2024 - Present
                     </div>
                     <p class="experience-details">
-                        Working as a freelance web developer, creating responsive websites for small businesses and individuals. Specializing in frontend development using modern technologies. Collaborating with clients to understand requirements and deliver tailored web solutions.
-                    </p>
-                </div>
-
-                <div class="experience-item">
-                    <h3>Personal Projects Developer</h3>
-                    <div class="experience-duration">
-                        <i class="far fa-calendar"></i> 2022 - Present
-                    </div>
-                    <p class="experience-details">
-                        Developing and maintaining personal projects including Sports Club Website, Music Platform, and Fitness Website. Focusing on clean code, responsive design, and user experience. Continuously learning and implementing new web technologies.
+                        Currently working as a Web Developer at Aptech Learning. Gaining hands-on experience in modern
+                        web development technologies and New Stacks working on real-world projects to enhance skills and build
+                        professional expertise.
                     </p>
                 </div>
             </div>
         </section>
-
         <!-- Skills Section with Updated Icons -->
         <section id="skills" class="skills-section">
             <h2 class="section-title">My Skills</h2>
@@ -2579,7 +2719,7 @@
             </div>
         </section>
 
-        
+
 
         <!-- Projects Section with Image Gallery -->
         <section id="projects">
@@ -2626,7 +2766,7 @@
                             The project focuses on clean UI design, structured sections, and mobile-friendly layouts.
                             Designed to showcase club information, activities, and services with a professional look.
                         </p>
-                        
+
                     </div>
                 </div>
 
@@ -2668,7 +2808,7 @@
                         <p>A frontend-based music website developed using HTML, CSS, Bootstrap, and Tailwind CSS.
                             The platform is designed to display music, videos, and artist content in an organized way.
                             Special focus on user-friendly layout, smooth navigation, and visual appeal.</p>
-                        
+
                     </div>
                 </div>
 
@@ -2711,79 +2851,103 @@
                             technologies.
                             The project includes a unique theme, animated sections, and an engaging user interface.
                             Focused on creativity, design consistency, and improving frontend development skills.</p>
-                        
+
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- Testimonials Section -->
+        <!-- Testimonials Section with Auto-Slide -->
         <section id="testimonials">
-            <h2 class="section-title">What Clients Say</h2>
-            <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="client-avatar">JS</div>
-                        <div class="client-info">
-                            <h4>John Smith</h4>
-                            <p>CEO, Tech Solutions Inc.</p>
+            <h2 class="section-title">Clients say about me</h2>
+
+            <div class="testimonials-wrapper">
+                <div class="testimonials-container">
+                    <!-- Testimonial Slide 1 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">JS</div>
+                                <div class="client-info">
+                                    <h4>John Smith</h4>
+                                    <p>CEO, Tech Solutions Inc.</p>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                "Working with Muhammad on our Sports Club website was exceptional. He delivered a
+                                responsive, modern design that perfectly captured our vision. His attention to detail
+                                and communication throughout the project was outstanding."
+                            </div>
                         </div>
                     </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+
+                    <!-- Testimonial Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">SA</div>
+                                <div class="client-info">
+                                    <h4>Sarah Ahmed</h4>
+                                    <p>Founder, MusicBeat Studio</p>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                "The SOUND Music Platform Muhammad created for us exceeded our expectations. The user
+                                interface is intuitive, the performance is smooth, and the design is visually stunning.
+                                He was professional, met all deadlines, and incorporated our feedback perfectly."
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial-text">
-                        "Working with Muhammad on our Sports Club website was exceptional. He delivered a responsive, modern design that perfectly captured our vision. His attention to detail and communication throughout the project was outstanding."
+
+                    <!-- Testimonial Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="client-avatar">RK</div>
+                                <div class="client-info">
+                                    <h4>Robert Khan</h4>
+                                    <p>Owner, Elite Fitness Gym</p>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="testimonial-text">
+                                "The Solo Leveling inspired fitness website Muhammad developed is truly unique and
+                                engaging. His creativity combined with technical skills resulted in a website that
+                                stands out. The animations are smooth, and the overall user experience is fantastic."
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="client-avatar">SA</div>
-                        <div class="client-info">
-                            <h4>Sarah Ahmed</h4>
-                            <p>Founder, MusicBeat Studio</p>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        "The SOUND Music Platform Muhammad created for us exceeded our expectations. The user interface is intuitive, the performance is smooth, and the design is visually stunning. He was professional, met all deadlines, and incorporated our feedback perfectly."
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="client-avatar">RK</div>
-                        <div class="client-info">
-                            <h4>Robert Khan</h4>
-                            <p>Owner, Elite Fitness Gym</p>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="testimonial-text">
-                        "The Solo Leveling inspired fitness website Muhammad developed is truly unique and engaging. His creativity combined with technical skills resulted in a website that stands out. The animations are smooth, and the overall user experience is fantastic."
-                    </div>
+                <!-- Navigation Dots -->
+                <div class="testimonial-nav">
+                    <button class="testimonial-dot active" data-slide="0"></button>
+                    <button class="testimonial-dot" data-slide="1"></button>
+                    <button class="testimonial-dot" data-slide="2"></button>
                 </div>
             </div>
         </section>
-
         <!-- Contact Section -->
         <section id="contact">
             <h2 class="section-title">Get In Touch</h2>
@@ -2972,20 +3136,20 @@
             });
         });
 
-      document.getElementById("downloadCV").addEventListener("click", function (e) {
-    e.preventDefault(); // page reload stop
+        document.getElementById("downloadCV").addEventListener("click", function (e) {
+            e.preventDefault(); // page reload stop
 
-    const fileUrl = "cv/Muhammad-Okasha-CV.pdf"; // CV path
-    const fileName = "Muhammad-Okasha-CV.pdf";
+            const fileUrl = "cv/Muhammad-Okasha-CV.pdf"; // CV path
+            const fileName = "Muhammad-Okasha-CV.pdf";
 
-    const link = document.createElement("a");
-    link.href = fileUrl;
-    link.download = fileName;
+            const link = document.createElement("a");
+            link.href = fileUrl;
+            link.download = fileName;
 
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
 
         // Section Visibility Observer
         const observerOptions = {
@@ -3391,6 +3555,60 @@
                 heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
                 heroImage.style.transform = `translateY(${scrolled * 0.05}px)`;
             }
+        });
+
+        // Testimonials Auto-Slide
+        let currentTestimonialSlide = 0;
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        const testimonialsContainer = document.querySelector('.testimonials-container');
+
+        function showTestimonialSlide(index) {
+            if (index >= testimonialSlides.length) {
+                currentTestimonialSlide = 0;
+            } else if (index < 0) {
+                currentTestimonialSlide = testimonialSlides.length - 1;
+            } else {
+                currentTestimonialSlide = index;
+            }
+
+            testimonialsContainer.style.transform = `translateX(-${currentTestimonialSlide * 100}%)`;
+
+            // Update dots
+            testimonialDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentTestimonialSlide);
+            });
+        }
+
+        // Auto slide testimonials every 5 seconds
+        let testimonialInterval = setInterval(() => {
+            showTestimonialSlide(currentTestimonialSlide + 1);
+        }, 5000);
+
+        // Dot click events
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showTestimonialSlide(index);
+                // Reset interval when user manually changes slide
+                clearInterval(testimonialInterval);
+                testimonialInterval = setInterval(() => {
+                    showTestimonialSlide(currentTestimonialSlide + 1);
+                }, 5000);
+            });
+        });
+
+        // Initialize testimonial slides
+        showTestimonialSlide(0);
+
+        // Pause auto-slide on hover
+        testimonialsContainer.addEventListener('mouseenter', () => {
+            clearInterval(testimonialInterval);
+        });
+
+        testimonialsContainer.addEventListener('mouseleave', () => {
+            testimonialInterval = setInterval(() => {
+                showTestimonialSlide(currentTestimonialSlide + 1);
+            }, 5000);
         });
     </script>
 </body>

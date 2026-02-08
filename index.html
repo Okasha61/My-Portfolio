@@ -813,40 +813,40 @@
         }
 
         /* Updated Colorful Square Icons for New Skills */
-.html-icon {
-    background: linear-gradient(135deg, #e34f26, #c4380f);
-    color: white;
-    border-color: #e34f26;
-    box-shadow: 0 5px 15px rgba(227, 79, 38, 0.3);
-}
+        .html-icon {
+            background: linear-gradient(135deg, #e34f26, #c4380f);
+            color: white;
+            border-color: #e34f26;
+            box-shadow: 0 5px 15px rgba(227, 79, 38, 0.3);
+        }
 
-.css-icon {
-    background: linear-gradient(135deg, #1572b6, #0d5a9d);
-    color: white;
-    border-color: #1572b6;
-    box-shadow: 0 5px 15px rgba(21, 114, 182, 0.3);
-}
+        .css-icon {
+            background: linear-gradient(135deg, #1572b6, #0d5a9d);
+            color: white;
+            border-color: #1572b6;
+            box-shadow: 0 5px 15px rgba(21, 114, 182, 0.3);
+        }
 
-.js-icon {
-    background: linear-gradient(135deg, #f7df1e, #d6ba00);
-    color: #000;
-    border-color: #f7df1e;
-    box-shadow: 0 5px 15px rgba(247, 223, 30, 0.3);
-}
+        .js-icon {
+            background: linear-gradient(135deg, #f7df1e, #d6ba00);
+            color: #000;
+            border-color: #f7df1e;
+            box-shadow: 0 5px 15px rgba(247, 223, 30, 0.3);
+        }
 
-.bootstrap-icon {
-    background: linear-gradient(135deg, #7952b3, #5e3d99);
-    color: white;
-    border-color: #7952b3;
-    box-shadow: 0 5px 15px rgba(121, 82, 179, 0.3);
-}
+        .bootstrap-icon {
+            background: linear-gradient(135deg, #7952b3, #5e3d99);
+            color: white;
+            border-color: #7952b3;
+            box-shadow: 0 5px 15px rgba(121, 82, 179, 0.3);
+        }
 
-.tailwind-icon {
-    background: linear-gradient(135deg, #38b2ac, #2c9a94);
-    color: white;
-    border-color: #38b2ac;
-    box-shadow: 0 5px 15px rgba(56, 178, 172, 0.3);
-}
+        .tailwind-icon {
+            background: linear-gradient(135deg, #38b2ac, #2c9a94);
+            color: white;
+            border-color: #38b2ac;
+            box-shadow: 0 5px 15px rgba(56, 178, 172, 0.3);
+        }
 
         .seo-icon {
             background: linear-gradient(135deg, #34a853, #2c8a47);
@@ -942,16 +942,16 @@
             animation: textSlide 0.5s ease 0.2s both;
         }
 
-        /* Projects Section with Enhanced Animations */
+        /* Projects Section with Enhanced Animations - UPDATED */
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
         }
 
         .project-card {
             background: var(--bg-card);
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
@@ -1012,44 +1012,159 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
-        .project-img-container {
+        /* Project Image Gallery */
+        .project-gallery {
+            position: relative;
             width: 100%;
-            height: 200px;
+            height: 250px;
             overflow: hidden;
+            background: var(--bg-secondary);
+        }
+
+        .gallery-main {
+            width: 100%;
+            height: 100%;
             position: relative;
         }
 
-        .project-img {
+        .gallery-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-slide.active {
+            opacity: 1;
+        }
+
+        .gallery-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s ease;
-            animation: imageZoom 20s infinite alternate;
+            transition: transform 0.5s ease;
         }
 
-        @keyframes imageZoom {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
+        .project-card:hover .gallery-slide img {
+            transform: scale(1.05);
         }
 
-        .project-card:hover .project-img {
+        /* Gallery Navigation Dots (Option 1) */
+        .gallery-dots {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            z-index: 2;
+        }
+
+        .gallery-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .gallery-dot.active {
+            background: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        .gallery-dot:hover {
+            background: var(--accent-secondary);
             transform: scale(1.1);
-            animation: imageZoomHover 0.5s ease;
         }
 
-        @keyframes imageZoomHover {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
+        /* Gallery Navigation Arrows (Option 1) */
+        .gallery-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+            opacity: 0;
         }
 
+        .project-gallery:hover .gallery-arrow {
+            opacity: 1;
+        }
+
+        .gallery-arrow:hover {
+            background: var(--accent-color);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-arrow.prev {
+            left: 15px;
+        }
+
+        .gallery-arrow.next {
+            right: 15px;
+        }
+
+        /* Gallery Thumbnails (Option 2) */
+        .gallery-thumbnails {
+            display: flex;
+            gap: 8px;
+            padding: 10px;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            overflow-x: auto;
+        }
+
+        .thumbnail {
+            width: 60px;
+            height: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            border: 2px solid transparent;
+        }
+
+        .thumbnail:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+
+        .thumbnail.active {
+            opacity: 1;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Project Content */
         .project-content {
             padding: 25px;
             animation: contentSlide 0.5s ease 0.3s both;
@@ -1537,6 +1652,25 @@
                 height: 60px;
                 font-size: 1.8rem;
             }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .project-gallery {
+                height: 220px;
+            }
+
+            .gallery-arrow {
+                opacity: 1;
+                background: rgba(0, 0, 0, 0.7);
+            }
+
+            .thumbnail {
+                width: 50px;
+                height: 35px;
+            }
         }
 
         /* Page Load Animation */
@@ -1654,7 +1788,7 @@
             
             <!-- Updated Skills Grid with New Skills -->
             <div class="skills-grid">
-                  <div class="skill-item">
+                <div class="skill-item">
                     <div class="skill-icon-container html-icon">
                         <i class="fab fa-html5"></i>
                     </div>
@@ -1819,58 +1953,306 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects Section with Image Gallery -->
         <section id="projects">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">My Projects</h2>
             <div class="projects-container">
+                
+                <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80"
-                            alt="E-Commerce Platform" class="project-img">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <!-- OPTION 1: With Navigation Arrows and Dots -->
+                            <div class="gallery-slide active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-Commerce Platform Homepage">
+                            </div>
+                            <div class="gallery-slide" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-Commerce Product Page">
+                            </div>
+                            <div class="gallery-slide" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-Commerce Dashboard">
+                            </div>
+                            <div class="gallery-slide" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="E-Commerce Checkout">
+                            </div>
+                            
+                            <button class="gallery-arrow prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <div class="gallery-dots">
+                                <button class="gallery-dot active" data-index="0"></button>
+                                <button class="gallery-dot" data-index="1"></button>
+                                <button class="gallery-dot" data-index="2"></button>
+                                <button class="gallery-dot" data-index="3"></button>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- OPTION 2: Uncomment for Thumbnail Navigation -->
+                    <!--
+                    <div class="gallery-thumbnails">
+                        <div class="thumbnail active" data-index="0">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 1">
+                        </div>
+                        <div class="thumbnail" data-index="1">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 2">
+                        </div>
+                        <div class="thumbnail" data-index="2">
+                            <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Thumbnail 3">
+                        </div>
+                        <div class="thumbnail" data-index="3">
+                            <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=60" alt="Thumbnail 4">
+                        </div>
+                    </div>
+                    -->
+                    
                     <div class="project-content">
                         <h3>Enterprise E-Commerce System</h3>
-                        <p>A comprehensive e-commerce platform built with .NET Core MVC, Angular, and SQL Server with Azure deployment.</p>
+                        <p>A comprehensive e-commerce platform built with .NET Core MVC, Angular, and SQL Server with Azure deployment. Features include user authentication, product management, shopping cart, payment integration, and admin dashboard.</p>
                         <div class="project-tags">
                             <span class="tag">.NET Core</span>
                             <span class="tag">Angular</span>
                             <span class="tag">SQL Server</span>
                             <span class="tag">Azure</span>
+                            <span class="tag">REST API</span>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-                            alt="Analytics Dashboard" class="project-img">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <div class="gallery-slide active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Analytics Dashboard Main">
+                            </div>
+                            <div class="gallery-slide" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Analytics Charts">
+                            </div>
+                            <div class="gallery-slide" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Analytics Reports">
+                            </div>
+                            <div class="gallery-slide" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Analytics Settings">
+                            </div>
+                            
+                            <button class="gallery-arrow prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <div class="gallery-dots">
+                                <button class="gallery-dot active" data-index="0"></button>
+                                <button class="gallery-dot" data-index="1"></button>
+                                <button class="gallery-dot" data-index="2"></button>
+                                <button class="gallery-dot" data-index="3"></button>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="project-content">
                         <h3>Business Analytics Dashboard</h3>
-                        <p>Real-time analytics dashboard with Laravel backend, Angular frontend, and MySQL database.</p>
+                        <p>Real-time analytics dashboard with Laravel backend, Angular frontend, and MySQL database. Provides interactive charts, data visualization, custom reports, and role-based access control for business intelligence.</p>
                         <div class="project-tags">
                             <span class="tag">Laravel</span>
                             <span class="tag">Angular</span>
                             <span class="tag">MySQL</span>
                             <span class="tag">REST API</span>
+                            <span class="tag">Chart.js</span>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-img-container">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
-                            alt="Fitness App" class="project-img">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <div class="gallery-slide active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthcare System Main">
+                            </div>
+                            <div class="gallery-slide" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1516549655669-df66fb595b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Patient Management">
+                            </div>
+                            <div class="gallery-slide" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Appointment Scheduling">
+                            </div>
+                            <div class="gallery-slide" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1516549655669-df66fb595b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Medical Records">
+                            </div>
+                            
+                            <button class="gallery-arrow prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <div class="gallery-dots">
+                                <button class="gallery-dot active" data-index="0"></button>
+                                <button class="gallery-dot" data-index="1"></button>
+                                <button class="gallery-dot" data-index="2"></button>
+                                <button class="gallery-dot" data-index="3"></button>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="project-content">
                         <h3>Healthcare Management System</h3>
-                        <p>Complete healthcare solution with .NET Web API, Angular frontend, and SQL Server database.</p>
+                        <p>Complete healthcare solution with .NET Web API, Angular frontend, and SQL Server database. Features include patient management, appointment scheduling, electronic medical records, billing system, and doctor portal.</p>
                         <div class="project-tags">
                             <span class="tag">.NET Web API</span>
                             <span class="tag">Angular</span>
                             <span class="tag">C#</span>
                             <span class="tag">SQL Server</span>
+                            <span class="tag">JWT Auth</span>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <div class="gallery-slide active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1556740738-6ebd6041245c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CMS Main">
+                            </div>
+                            <div class="gallery-slide" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Content Editor">
+                            </div>
+                            <div class="gallery-slide" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1556740738-6ebd6041245c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="User Management">
+                            </div>
+                            <div class="gallery-slide" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Media Library">
+                            </div>
+                            
+                            <button class="gallery-arrow prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <div class="gallery-dots">
+                                <button class="gallery-dot active" data-index="0"></button>
+                                <button class="gallery-dot" data-index="1"></button>
+                                <button class="gallery-dot" data-index="2"></button>
+                                <button class="gallery-dot" data-index="3"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>Content Management System</h3>
+                        <p>Advanced CMS built with Laravel and Vue.js for managing website content. Includes WYSIWYG editor, media management, user roles, SEO tools, and multi-language support.</p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Redis</span>
+                            <span class="tag">SEO Tools</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <div class="gallery-slide active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Task Manager Main">
+                            </div>
+                            <div class="gallery-slide" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1516549655669-df66fb595b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project View">
+                            </div>
+                            <div class="gallery-slide" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Calendar View">
+                            </div>
+                            <div class="gallery-slide" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1516549655669-df66fb595b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Team Collaboration">
+                            </div>
+                            
+                            <button class="gallery-arrow prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <div class="gallery-dots">
+                                <button class="gallery-dot active" data-index="0"></button>
+                                <button class="gallery-dot" data-index="1"></button>
+                                <button class="gallery-dot" data-index="2"></button>
+                                <button class="gallery-dot" data-index="3"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>Project Management Tool</h3>
+                        <p>Collaborative project management application with real-time updates, task assignment, time tracking, and file sharing. Built with .NET Core and React.</p>
+                        <div class="project-tags">
+                            <span class="tag">.NET Core</span>
+                            <span class="tag">React</span>
+                            <span class="tag">SignalR</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">WebSockets</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-gallery">
+                        <div class="gallery-main">
+                            <div class="gallery-slide active" data-index="0">
+                                <img src="https://images.unsplash.com/photo-1556740738-6ebd6041245c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Learning Platform Main">
+                            </div>
+                            <div class="gallery-slide" data-index="1">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Course View">
+                            </div>
+                            <div class="gallery-slide" data-index="2">
+                                <img src="https://images.unsplash.com/photo-1556740738-6ebd6041245c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Progress Tracking">
+                            </div>
+                            <div class="gallery-slide" data-index="3">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Admin Panel">
+                            </div>
+                            
+                            <button class="gallery-arrow prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <div class="gallery-dots">
+                                <button class="gallery-dot active" data-index="0"></button>
+                                <button class="gallery-dot" data-index="1"></button>
+                                <button class="gallery-dot" data-index="2"></button>
+                                <button class="gallery-dot" data-index="3"></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <h3>Online Learning Platform</h3>
+                        <p>E-learning platform with course management, video streaming, quizzes, certificates, and payment integration. Built with PHP Laravel and JavaScript.</p>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Stripe API</span>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
@@ -1951,6 +2333,7 @@
                     // Trigger initial animations after load
                     setTimeout(() => {
                         animateOnScroll();
+                        initProjectGalleries();
                     }, 100);
                 }, 500);
             }, 2000);
@@ -2276,6 +2659,143 @@
                 }, 1000);
             }
         }, 3000);
+
+        // Project Gallery Functionality
+        function initProjectGalleries() {
+            document.querySelectorAll('.project-card').forEach(card => {
+                const gallery = card.querySelector('.gallery-main');
+                const slides = gallery.querySelectorAll('.gallery-slide');
+                const dots = gallery.querySelectorAll('.gallery-dot');
+                const prevBtn = gallery.querySelector('.gallery-arrow.prev');
+                const nextBtn = gallery.querySelector('.gallery-arrow.next');
+                const thumbnails = card.querySelectorAll('.thumbnail');
+                
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+                
+                // Function to show slide
+                function showSlide(index) {
+                    // Remove active class from all slides and dots
+                    slides.forEach(slide => slide.classList.remove('active'));
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                    
+                    // Add active class to current slide and dot
+                    slides[index].classList.add('active');
+                    if (dots[index]) dots[index].classList.add('active');
+                    if (thumbnails[index]) thumbnails[index].classList.add('active');
+                    
+                    currentSlide = index;
+                }
+                
+                // Next slide function
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    showSlide(currentSlide);
+                }
+                
+                // Previous slide function
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    showSlide(currentSlide);
+                }
+                
+                // Auto slide every 5 seconds
+                let slideInterval = setInterval(nextSlide, 5000);
+                
+                // Pause auto-slide on hover
+                gallery.addEventListener('mouseenter', () => {
+                    clearInterval(slideInterval);
+                });
+                
+                gallery.addEventListener('mouseleave', () => {
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+                
+                // Event listeners for arrows
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        prevSlide();
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    });
+                }
+                
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        nextSlide();
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    });
+                }
+                
+                // Event listeners for dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        showSlide(index);
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    });
+                });
+                
+                // Event listeners for thumbnails
+                thumbnails.forEach((thumb, index) => {
+                    thumb.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        showSlide(index);
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    });
+                });
+                
+                // Touch swipe support for mobile
+                let startX = 0;
+                let endX = 0;
+                
+                gallery.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                gallery.addEventListener('touchmove', (e) => {
+                    endX = e.touches[0].clientX;
+                });
+                
+                gallery.addEventListener('touchend', () => {
+                    const threshold = 50;
+                    
+                    if (startX - endX > threshold) {
+                        // Swipe left - next slide
+                        nextSlide();
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    } else if (endX - startX > threshold) {
+                        // Swipe right - previous slide
+                        prevSlide();
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    }
+                });
+                
+                // Keyboard navigation
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        prevSlide();
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    } else if (e.key === 'ArrowRight') {
+                        nextSlide();
+                        clearInterval(slideInterval);
+                        slideInterval = setInterval(nextSlide, 5000);
+                    }
+                });
+            });
+        }
+
+        // Initialize project galleries when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initProjectGalleries);
     </script>
 </body>
 

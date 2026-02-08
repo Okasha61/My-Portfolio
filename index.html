@@ -235,11 +235,25 @@
             animation: fadeInDown 0.5s forwards;
         }
 
-        .nav-links a:nth-child(1) { animation-delay: 1.6s; }
-        .nav-links a:nth-child(2) { animation-delay: 1.7s; }
-        .nav-links a:nth-child(3) { animation-delay: 1.8s; }
-        .nav-links a:nth-child(4) { animation-delay: 1.9s; }
-        .nav-links a:nth-child(5) { animation-delay: 2.0s; }
+        .nav-links a:nth-child(1) {
+            animation-delay: 1.6s;
+        }
+
+        .nav-links a:nth-child(2) {
+            animation-delay: 1.7s;
+        }
+
+        .nav-links a:nth-child(3) {
+            animation-delay: 1.8s;
+        }
+
+        .nav-links a:nth-child(4) {
+            animation-delay: 1.9s;
+        }
+
+        .nav-links a:nth-child(5) {
+            animation-delay: 2.0s;
+        }
 
         @keyframes fadeInDown {
             to {
@@ -392,6 +406,7 @@
             0% {
                 filter: drop-shadow(0 0 5px rgba(58, 134, 255, 0.3));
             }
+
             100% {
                 filter: drop-shadow(0 0 15px rgba(131, 56, 236, 0.5));
             }
@@ -414,6 +429,7 @@
             0% {
                 width: 0;
             }
+
             100% {
                 width: 100px;
             }
@@ -495,9 +511,12 @@
         }
 
         @keyframes buttonPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(-5px) scale(1);
             }
+
             50% {
                 transform: translateY(-5px) scale(1.05);
             }
@@ -518,6 +537,7 @@
             0% {
                 box-shadow: var(--shadow), 0 0 20px rgba(58, 134, 255, 0.2);
             }
+
             100% {
                 box-shadow: var(--shadow), 0 0 30px rgba(131, 56, 236, 0.3);
             }
@@ -556,9 +576,11 @@
                 transform: translateY(30px);
                 opacity: 0;
             }
+
             60% {
                 transform: translateY(-10px);
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 1;
@@ -578,9 +600,19 @@
         }
 
         @keyframes titleShake {
-            0%, 100% { transform: translateX(-50%); }
-            25% { transform: translateX(-52%); }
-            75% { transform: translateX(-48%); }
+
+            0%,
+            100% {
+                transform: translateX(-50%);
+            }
+
+            25% {
+                transform: translateX(-52%);
+            }
+
+            75% {
+                transform: translateX(-48%);
+            }
         }
 
         .section-title::after {
@@ -603,9 +635,12 @@
         }
 
         @keyframes linePulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scaleX(1);
             }
+
             50% {
                 transform: scaleX(1.05);
             }
@@ -638,6 +673,7 @@
             from {
                 clip-path: inset(0 100% 0 0);
             }
+
             to {
                 clip-path: inset(0 0 0 0);
             }
@@ -674,9 +710,11 @@
             0% {
                 transform: scale(0.8);
             }
+
             50% {
                 transform: scale(1.1);
             }
+
             100% {
                 transform: scale(1);
             }
@@ -696,6 +734,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -745,7 +784,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transition: left 0.7s ease;
         }
 
@@ -765,9 +804,19 @@
         }
 
         @keyframes skillShake {
-            0%, 100% { transform: translateY(-10px) scale(1.02); }
-            25% { transform: translateY(-10px) scale(1.02) rotate(-2deg); }
-            75% { transform: translateY(-10px) scale(1.02) rotate(2deg); }
+
+            0%,
+            100% {
+                transform: translateY(-10px) scale(1.02);
+            }
+
+            25% {
+                transform: translateY(-10px) scale(1.02) rotate(-2deg);
+            }
+
+            75% {
+                transform: translateY(-10px) scale(1.02) rotate(2deg);
+            }
         }
 
         .dark-mode .skill-item:hover {
@@ -791,9 +840,12 @@
         }
 
         @keyframes iconFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-5px) rotate(5deg);
             }
@@ -808,6 +860,7 @@
             0% {
                 transform: scale(1) rotate(0deg);
             }
+
             100% {
                 transform: scale(1.1) rotate(10deg);
             }
@@ -931,16 +984,11 @@
                 opacity: 0;
                 transform: translateX(-10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
-        }
-
-        .skill-level {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            animation: textSlide 0.5s ease 0.2s both;
         }
 
         /* Projects Section with Enhanced Animations - UPDATED */
@@ -989,6 +1037,7 @@
             0% {
                 transform: translateY(40px) scale(0.9) rotateY(90deg);
             }
+
             100% {
                 transform: translateY(0) scale(1) rotateY(0);
             }
@@ -1001,9 +1050,12 @@
         }
 
         @keyframes cardPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(-10px) scale(1.02);
             }
+
             50% {
                 transform: translateY(-10px) scale(1.03);
             }
@@ -1192,6 +1244,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -1219,6 +1272,7 @@
                 transform: scale(0.9);
                 opacity: 0;
             }
+
             to {
                 transform: scale(1);
                 opacity: 1;
@@ -1305,6 +1359,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1334,6 +1389,7 @@
                 opacity: 0;
                 transform: scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -1346,9 +1402,12 @@
         }
 
         @keyframes tagBounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(-2px);
             }
+
             50% {
                 transform: translateY(-5px);
             }
@@ -1394,6 +1453,7 @@
                 opacity: 0;
                 transform: translateX(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1412,9 +1472,12 @@
         }
 
         @keyframes contactBounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateX(5px);
             }
+
             50% {
                 transform: translateX(8px);
             }
@@ -1439,6 +1502,7 @@
                 transform: scale(1);
                 box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
             }
+
             100% {
                 transform: scale(1.05);
                 box-shadow: 0 8px 20px rgba(131, 56, 236, 0.4);
@@ -1458,6 +1522,7 @@
                 opacity: 0;
                 transform: translateX(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1486,6 +1551,7 @@
             0% {
                 box-shadow: 0 0 5px rgba(58, 134, 255, 0.1);
             }
+
             100% {
                 box-shadow: 0 0 10px rgba(131, 56, 236, 0.2);
             }
@@ -1503,6 +1569,7 @@
             0% {
                 box-shadow: 0 0 0 0 rgba(58, 134, 255, 0.1);
             }
+
             100% {
                 box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.1);
             }
@@ -1522,6 +1589,7 @@
                 transform: translateY(50px);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -1559,6 +1627,7 @@
                 opacity: 0;
                 transform: translateY(20px) scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -1578,9 +1647,12 @@
         }
 
         @keyframes socialBounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(-5px);
             }
+
             50% {
                 transform: translateY(-8px);
             }
@@ -1601,6 +1673,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1629,6 +1702,7 @@
             0% {
                 box-shadow: 0 0 5px rgba(58, 134, 255, 0.5);
             }
+
             100% {
                 box-shadow: 0 0 10px rgba(131, 56, 236, 0.7);
             }
@@ -1659,9 +1733,12 @@
         }
 
         @keyframes backToTopFloat {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-5px);
             }
@@ -1679,6 +1756,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1692,12 +1770,128 @@
         }
 
         @keyframes backToTopPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(-5px);
             }
+
             50% {
                 transform: translateY(-8px);
             }
+        }
+
+        /* Popup Modal Styles */
+        .popup-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10002;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup-modal.active {
+            display: flex;
+            opacity: 1;
+            animation: popupFadeIn 0.3s ease;
+        }
+
+        @keyframes popupFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .popup-content {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            animation: popupScale 0.3s ease forwards;
+            border: 1px solid var(--border-color);
+        }
+
+        @keyframes popupScale {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .popup-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: white;
+            animation: popupIconPulse 2s infinite alternate;
+        }
+
+        @keyframes popupIconPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 5px 20px rgba(58, 134, 255, 0.3);
+            }
+            100% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(131, 56, 236, 0.4);
+            }
+        }
+
+        .popup-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .popup-message {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .popup-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
+        }
+
+        .popup-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(58, 134, 255, 0.4);
         }
 
         /* Responsive */
@@ -1712,6 +1906,7 @@
                     opacity: 0;
                     transform: translateY(-10px);
                 }
+
                 to {
                     opacity: 1;
                     transform: translateY(0);
@@ -1743,6 +1938,7 @@
                 from {
                     left: -100%;
                 }
+
                 to {
                     left: 0;
                 }
@@ -1835,6 +2031,26 @@
                 font-size: 1rem;
                 padding: 5px 15px;
             }
+
+            /* Popup Responsive */
+            .popup-content {
+                padding: 30px 20px;
+                width: 95%;
+            }
+
+            .popup-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+
+            .popup-title {
+                font-size: 1.6rem;
+            }
+
+            .popup-message {
+                font-size: 1rem;
+            }
         }
 
         /* Page Load Animation */
@@ -1843,6 +2059,7 @@
                 opacity: 0;
                 transform: scale(0.95);
             }
+
             100% {
                 opacity: 1;
                 transform: scale(1);
@@ -1886,6 +2103,18 @@
         </div>
     </div>
 
+    <!-- Popup Modal for Success Message -->
+    <div class="popup-modal" id="successPopup">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2 class="popup-title">Message Sent Successfully!</h2>
+            <p class="popup-message">Thank you for reaching out! I have received your message and will get back to you within 24 hours. I appreciate your interest in my work.</p>
+            <button class="popup-button" id="popupClose">Close</button>
+        </div>
+    </div>
+
     <!-- Sticky Navbar -->
     <header id="mainHeader">
         <div class="nav-container">
@@ -1922,8 +2151,9 @@
         <section id="home" class="hero visible">
             <div class="hero-content">
                 <h1>Muhammad Okasha</h1>
-                <h2>Full-Stack Web Developer</h2>
-                <p>I specialize in building modern, responsive web applications using a wide range of technologies including .NET Core, Angular, PHP, Laravel, and Azure cloud solutions.</p>
+                <h2>Front-End Web Developer</h2>
+                <p>I craft modern, responsive, and user-friendly websites using HTML, CSS, JavaScript, Bootstrap, and
+                    Tailwind CSS to bring ideas to life on the web.</p>
                 <a href="#projects" class="cta-button">View My Work</a>
             </div>
             <div class="hero-image">
@@ -1935,17 +2165,28 @@
         <section id="about">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p class="about-text">I am Muhammad Okasha, a passionate Full-Stack Web Developer with expertise in both frontend and backend technologies. I specialize in building modern, responsive, and user-friendly web applications using technologies like .NET Core, Angular, PHP, Laravel, SQL Server, and Azure cloud services. <br> <br>
+                <p class="about-text">I am Muhammad Okasha, a passionate Frontend-focused Web Developer and aspiring
+                    Full-Stack (MERN) Developer. I specialize in building modern, responsive, and user-friendly web
+                    interfaces while continuously strengthening my backend skills to become a complete full-stack
+                    developer. <br><br>
 
-                    With a strong foundation in both frontend and backend development, I create complete web solutions from database design to user interface implementation. I have experience working with various databases including MySQL, SQL Server, and building RESTful APIs with .NET Web API and Laravel. <br><br>
+                    I have completed my Intermediate education and pursued professional web development training from
+                    Aptech, where I built a strong foundation in HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and
+                    modern frontend practices. Alongside this, I am actively preparing for full-stack development using
+                    the MERN stack.<br><br>
 
-                    My expertise extends to cloud platforms like Azure, where I deploy and manage scalable applications. I'm proficient in TypeScript with Angular for frontend development and C# with .NET Core for backend systems. I follow best practices in SEO optimization and implement secure, performant web applications. <br><br>
+                    I have worked on 6 practice-based projects, including websites for a Sports Club, Music platform,
+                    and Gym, focusing on clean UI design, responsiveness, and performance. Currently, I am working on my
+                    personal project inspired by the anime "Solo Leveling", which reflects my creativity, consistency,
+                    and passion for web development.<br><br>
 
-                    I have worked on multiple projects, implementing clean architecture patterns, efficient database designs, and responsive user interfaces. My goal is to create robust, scalable applications that provide excellent user experiences while maintaining clean code and modern development practices. <br><br>
+                    Frontend development is my primary strength, and I enjoy crafting engaging user experiences with
+                    clean code and modern design principles. At the same time, I am continuously learning backend
+                    technologies to build scalable, end-to-end web applications.<br><br>
 
-                    Whether it's building enterprise applications with .NET MVC, creating dynamic interfaces with Angular, or developing content management systems with Laravel, I enjoy tackling complex challenges and delivering high-quality solutions. <br><br>
-
-                    My career objective is to work on challenging projects that leverage my full-stack capabilities while continuously learning and adapting to new technologies in the ever-evolving web development landscape.<br></p>
+                    My career goal is to work professionally in the industry through a job, while also pursuing
+                    freelancing to gain real-world experience, expand my skill set, and deliver impactful digital
+                    solutions.<br></p>
                 <div class="stats-container">
                     <div class="stat-item">
                         <div class="stat-number">10+</div>
@@ -1966,7 +2207,7 @@
         <!-- Skills Section with Updated Icons -->
         <section id="skills" class="skills-section">
             <h2 class="section-title">My Skills</h2>
-            
+
             <!-- Updated Skills Grid with New Skills -->
             <div class="skills-grid">
                 <div class="skill-item">
@@ -1975,10 +2216,9 @@
                     </div>
                     <div>
                         <div class="skill-name">HTML5</div>
-                        <div class="skill-level">Expert</div>
                     </div>
                 </div>
-                
+
                 <!-- CSS3 -->
                 <div class="skill-item">
                     <div class="skill-icon-container css-icon">
@@ -1986,10 +2226,9 @@
                     </div>
                     <div>
                         <div class="skill-name">CSS3</div>
-                        <div class="skill-level">Expert</div>
                     </div>
                 </div>
-                
+
                 <!-- JavaScript -->
                 <div class="skill-item">
                     <div class="skill-icon-container js-icon">
@@ -1997,10 +2236,9 @@
                     </div>
                     <div>
                         <div class="skill-name">JavaScript</div>
-                        <div class="skill-level">Advanced</div>
                     </div>
                 </div>
-                
+
                 <!-- Bootstrap -->
                 <div class="skill-item">
                     <div class="skill-icon-container bootstrap-icon">
@@ -2008,10 +2246,9 @@
                     </div>
                     <div>
                         <div class="skill-name">Bootstrap</div>
-                        <div class="skill-level">Expert</div>
                     </div>
                 </div>
-                
+
                 <!-- Tailwind CSS -->
                 <div class="skill-item">
                     <div class="skill-icon-container tailwind-icon">
@@ -2019,7 +2256,6 @@
                     </div>
                     <div>
                         <div class="skill-name">Tailwind CSS</div>
-                        <div class="skill-level">Advanced</div>
                     </div>
                 </div>
                 <!-- SEO -->
@@ -2029,10 +2265,9 @@
                     </div>
                     <div>
                         <div class="skill-name">SEO</div>
-                        <div class="skill-level">Expert</div>
                     </div>
                 </div>
-                
+
                 <!-- PHP -->
                 <div class="skill-item">
                     <div class="skill-icon-container php-icon">
@@ -2040,10 +2275,9 @@
                     </div>
                     <div>
                         <div class="skill-name">PHP</div>
-                        <div class="skill-level">Advanced</div>
                     </div>
                 </div>
-                
+
                 <!-- MySQL -->
                 <div class="skill-item">
                     <div class="skill-icon-container mysql-icon">
@@ -2051,10 +2285,9 @@
                     </div>
                     <div>
                         <div class="skill-name">MySQL</div>
-                        <div class="skill-level">Expert</div>
                     </div>
                 </div>
-                
+
                 <!-- Laravel -->
                 <div class="skill-item">
                     <div class="skill-icon-container laravel-icon">
@@ -2062,10 +2295,9 @@
                     </div>
                     <div>
                         <div class="skill-name">Laravel</div>
-                        <div class="skill-level">Advanced</div>
                     </div>
                 </div>
-                
+
                 <!-- SQL Server -->
                 <div class="skill-item">
                     <div class="skill-icon-container sqlserver-icon">
@@ -2073,10 +2305,9 @@
                     </div>
                     <div>
                         <div class="skill-name">SQL Server</div>
-                        <div class="skill-level">Advanced</div>
                     </div>
                 </div>
-                
+
                 <!-- C# -->
                 <div class="skill-item">
                     <div class="skill-icon-container csharp-icon">
@@ -2084,10 +2315,9 @@
                     </div>
                     <div>
                         <div class="skill-name">C#</div>
-                        <div class="skill-level">Advanced</div>
                     </div>
                 </div>
-                
+
                 <!-- Angular (TypeScript) -->
                 <div class="skill-item">
                     <div class="skill-icon-container angular-icon">
@@ -2095,10 +2325,9 @@
                     </div>
                     <div>
                         <div class="skill-name">Angular (TypeScript)</div>
-                        <div class="skill-level">Expert</div>
                     </div>
                 </div>
-                
+
                 <!-- .NET Core (MVC) -->
                 <div class="skill-item">
                     <div class="skill-icon-container dotnetcore-icon">
@@ -2106,10 +2335,9 @@
                     </div>
                     <div>
                         <div class="skill-name">.NET Core (MVC)</div>
-                        <div class="skill-level">Expert</div>
                     </div>
                 </div>
-                
+
                 <!-- .NET (WEB API) -->
                 <div class="skill-item">
                     <div class="skill-icon-container dotnetapi-icon">
@@ -2117,10 +2345,9 @@
                     </div>
                     <div>
                         <div class="skill-name">.NET (WEB API)</div>
-                        <div class="skill-level">Advanced</div>
                     </div>
                 </div>
-                
+
                 <!-- Azure -->
                 <div class="skill-item">
                     <div class="skill-icon-container azure-icon">
@@ -2128,7 +2355,6 @@
                     </div>
                     <div>
                         <div class="skill-name">Azure</div>
-                        <div class="skill-level">Intermediate</div>
                     </div>
                 </div>
             </div>
@@ -2138,7 +2364,7 @@
         <section id="projects">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-container">
-                
+
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-gallery">
@@ -2156,14 +2382,14 @@
                             <div class="gallery-slide" data-index="3">
                                 <img src="assets/pro1111.png" alt="E-Commerce Checkout">
                             </div>
-                            
+
                             <button class="gallery-arrow prev">
                                 <i class="fas fa-chevron-left"></i>
                             </button>
                             <button class="gallery-arrow next">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
-                            
+
                             <div class="gallery-dots">
                                 <button class="gallery-dot active" data-index="0"></button>
                                 <button class="gallery-dot" data-index="1"></button>
@@ -2172,20 +2398,17 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="project-content">
-                        <h3>Enterprise E-Commerce System</h3>
-                        <p>A comprehensive e-commerce platform built with .NET Core MVC, Angular, and SQL Server with Azure deployment. Features include user authentication, product management, shopping cart, payment integration, and admin dashboard.</p>
-                        <div class="project-tags">
-                            <span class="tag">.NET Core</span>
-                            <span class="tag">Angular</span>
-                            <span class="tag">SQL Server</span>
-                            <span class="tag">Azure</span>
-                            <span class="tag">REST API</span>
-                        </div>
+                        <h3>🏟️ Ryan Sports Club Website</h3><br>
+                        <p>A modern, responsive sports club website built using HTML, CSS, Bootstrap, and Tailwind CSS.
+                            The project focuses on clean UI design, structured sections, and mobile-friendly layouts.
+                            Designed to showcase club information, activities, and services with a professional look.
+                        </p>
+                        
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-gallery">
@@ -2202,14 +2425,14 @@
                             <div class="gallery-slide" data-index="3">
                                 <img src="assets/pro2222.png" alt="Analytics Settings">
                             </div>
-                            
+
                             <button class="gallery-arrow prev">
                                 <i class="fas fa-chevron-left"></i>
                             </button>
                             <button class="gallery-arrow next">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
-                            
+
                             <div class="gallery-dots">
                                 <button class="gallery-dot active" data-index="0"></button>
                                 <button class="gallery-dot" data-index="1"></button>
@@ -2218,20 +2441,16 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="project-content">
-                        <h3>Business Analytics Dashboard</h3>
-                        <p>Real-time analytics dashboard with Laravel backend, Angular frontend, and MySQL database. Provides interactive charts, data visualization, custom reports, and role-based access control for business intelligence.</p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">Angular</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">Chart.js</span>
-                        </div>
+                        <h3>🎵 SOUND – Music Platform</h3><br>
+                        <p>A frontend-based music website developed using HTML, CSS, Bootstrap, and Tailwind CSS.
+                            The platform is designed to display music, videos, and artist content in an organized way.
+                            Special focus on user-friendly layout, smooth navigation, and visual appeal.</p>
+                        
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-gallery">
@@ -2248,14 +2467,14 @@
                             <div class="gallery-slide" data-index="3">
                                 <img src="assets/pro3333.png" alt="Medical Records">
                             </div>
-                            
+
                             <button class="gallery-arrow prev">
                                 <i class="fas fa-chevron-left"></i>
                             </button>
                             <button class="gallery-arrow next">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
-                            
+
                             <div class="gallery-dots">
                                 <button class="gallery-dot active" data-index="0"></button>
                                 <button class="gallery-dot" data-index="1"></button>
@@ -2264,20 +2483,17 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="project-content">
-                        <h3>Healthcare Management System</h3>
-                        <p>Complete healthcare solution with .NET Web API, Angular frontend, and SQL Server database. Features include patient management, appointment scheduling, electronic medical records, billing system, and doctor portal.</p>
-                        <div class="project-tags">
-                            <span class="tag">.NET Web API</span>
-                            <span class="tag">Angular</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">SQL Server</span>
-                            <span class="tag">JWT Auth</span>
-                        </div>
+                        <h3>⚔️ Solo Leveling – Fitness Website (Personal Project)</h3><br>
+                        <p>A creative fitness website inspired by the anime Solo Leveling, built using modern frontend
+                            technologies.
+                            The project includes a unique theme, animated sections, and an engaging user interface.
+                            Focused on creativity, design consistency, and improving frontend development skills.</p>
+                        
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
@@ -2292,7 +2508,7 @@
                         </div>
                         <div>
                             <h3>Email</h3>
-                            <p style="color: var(--text-secondary);">okasha@developer.dev</p>
+                            <p style="color: var(--text-secondary);">muhammadokasha992@gamil.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -2301,7 +2517,7 @@
                         </div>
                         <div>
                             <h3>Phone</h3>
-                            <p style="color: var(--text-secondary);">+92 300 1234567</p>
+                            <p style="color: var(--text-secondary);">+92 328 2315011</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -2310,16 +2526,7 @@
                         </div>
                         <div>
                             <h3>Location</h3>
-                                                       <p style="color: var(--text-secondary);">Karachi, Pakistan</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h3>Available Hours</h3>
-                            <p style="color: var(--text-secondary);">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            <p style="color: var(--text-secondary);">Karachi, Pakistan</p>
                         </div>
                     </div>
                 </div>
@@ -2331,9 +2538,6 @@
                         </div>
                         <div class="form-group">
                             <input type="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
                             <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
@@ -2348,19 +2552,16 @@
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="https://github.com" class="social-link" target="_blank">
+            <a href="https://github.com/Okasha61" class="social-link" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com" class="social-link" target="_blank">
+            <a href="https://www.linkedin.com/in/muhammadokasha1861/" class="social-link" target="_blank">
                 <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://twitter.com" class="social-link" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://facebook.com" class="social-link" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=61555584374293" class="social-link" target="_blank">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://instagram.com" class="social-link" target="_blank">
+            <a href="https://www.instagram.com/muhammadokasha1861/" class="social-link" target="_blank">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
@@ -2369,10 +2570,10 @@
 
     <script>
         // Loading Screen
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const loadingScreen = document.getElementById('loading-screen');
             const body = document.body;
-            
+
             setTimeout(() => {
                 loadingScreen.style.opacity = '0';
                 setTimeout(() => {
@@ -2386,11 +2587,11 @@
         const themeToggle = document.getElementById('themeToggle');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
+
             // Save preference to localStorage
             const isDarkMode = document.body.classList.contains('dark-mode');
             localStorage.setItem('darkMode', isDarkMode);
-            
+
             // Update icon
             const icon = themeToggle.querySelector('i');
             if (isDarkMode) {
@@ -2448,7 +2649,7 @@
 
         mobileToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            
+
             // Toggle menu icon
             const icon = mobileToggle.querySelector('i');
             if (navLinks.classList.contains('active')) {
@@ -2468,12 +2669,12 @@
 
         // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -2494,7 +2695,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    
+
                     // Animate section title underline
                     const title = entry.target.querySelector('.section-title');
                     if (title) {
@@ -2502,7 +2703,7 @@
                             title.classList.add('animated');
                         }, 300);
                     }
-                    
+
                     // Animate about text
                     const aboutText = entry.target.querySelectorAll('.about-text');
                     aboutText.forEach((text, index) => {
@@ -2510,7 +2711,7 @@
                             text.classList.add('visible');
                         }, index * 200);
                     });
-                    
+
                     // Animate stat items
                     const statItems = entry.target.querySelectorAll('.stat-item');
                     statItems.forEach((item, index) => {
@@ -2518,7 +2719,7 @@
                             item.classList.add('visible');
                         }, index * 200);
                     });
-                    
+
                     // Animate skill items
                     const skillItems = entry.target.querySelectorAll('.skill-item');
                     skillItems.forEach((item, index) => {
@@ -2526,7 +2727,7 @@
                             item.classList.add('visible');
                         }, index * 100);
                     });
-                    
+
                     // Animate project cards
                     const projectCards = entry.target.querySelectorAll('.project-card');
                     projectCards.forEach((card, index) => {
@@ -2534,7 +2735,7 @@
                             card.classList.add('visible');
                         }, index * 200);
                     });
-                    
+
                     // Animate contact items
                     const contactItems = entry.target.querySelectorAll('.contact-item');
                     contactItems.forEach((item, index) => {
@@ -2542,7 +2743,7 @@
                             item.classList.add('visible');
                         }, index * 200);
                     });
-                    
+
                     // Animate form groups
                     const formGroups = entry.target.querySelectorAll('.form-group');
                     formGroups.forEach((group, index) => {
@@ -2550,7 +2751,7 @@
                             group.classList.add('visible');
                         }, index * 200);
                     });
-                    
+
                     // Animate social links
                     const socialLinks = entry.target.querySelectorAll('.social-link');
                     socialLinks.forEach((link, index) => {
@@ -2558,7 +2759,7 @@
                             link.classList.add('visible');
                         }, index * 100);
                     });
-                    
+
                     // Animate copyright
                     const copyright = entry.target.querySelector('.copyright');
                     if (copyright) {
@@ -2582,31 +2783,31 @@
             const dots = gallery.querySelectorAll('.gallery-dot');
             const prevBtn = gallery.querySelector('.gallery-arrow.prev');
             const nextBtn = gallery.querySelector('.gallery-arrow.next');
-            
+
             let currentSlide = 0;
-            
+
             function showSlide(index) {
                 // Hide all slides
                 slides.forEach(slide => {
                     slide.classList.remove('active');
                 });
-                
+
                 // Remove active from all dots
                 dots.forEach(dot => {
                     dot.classList.remove('active');
                 });
-                
+
                 // Show current slide
                 slides[index].classList.add('active');
-                
+
                 // Activate current dot
                 if (dots[index]) {
                     dots[index].classList.add('active');
                 }
-                
+
                 currentSlide = index;
             }
-            
+
             // Next slide
             if (nextBtn) {
                 nextBtn.addEventListener('click', () => {
@@ -2615,7 +2816,7 @@
                     showSlide(nextIndex);
                 });
             }
-            
+
             // Previous slide
             if (prevBtn) {
                 prevBtn.addEventListener('click', () => {
@@ -2624,17 +2825,17 @@
                     showSlide(prevIndex);
                 });
             }
-            
+
             // Dot navigation
             dots.forEach((dot, index) => {
                 dot.addEventListener('click', () => {
                     showSlide(index);
                 });
             });
-            
+
             // Auto slide (optional)
             let slideInterval;
-            
+
             function startAutoSlide() {
                 slideInterval = setInterval(() => {
                     let nextIndex = currentSlide + 1;
@@ -2642,18 +2843,18 @@
                     showSlide(nextIndex);
                 }, 5000);
             }
-            
+
             function stopAutoSlide() {
                 clearInterval(slideInterval);
             }
-            
+
             // Start auto slide
             startAutoSlide();
-            
+
             // Pause on hover
             gallery.addEventListener('mouseenter', stopAutoSlide);
             gallery.addEventListener('mouseleave', startAutoSlide);
-            
+
             // Click to open lightbox
             slides.forEach((slide, index) => {
                 slide.addEventListener('click', () => {
@@ -2680,10 +2881,10 @@
             currentGallery = gallery;
             lightboxImages = Array.from(gallery.querySelectorAll('.gallery-slide img')).map(img => img.src);
             currentLightboxIndex = index;
-            
+
             // Update lightbox
             updateLightbox();
-            
+
             // Show lightbox
             lightboxModal.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -2725,7 +2926,7 @@
             if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
                 closeLightbox();
             }
-            
+
             // Navigation with arrow keys
             if (lightboxModal.classList.contains('active')) {
                 if (e.key === 'ArrowRight') {
@@ -2744,33 +2945,62 @@
             }
         });
 
+        // Success Popup Functionality
+        const successPopup = document.getElementById('successPopup');
+        const popupClose = document.getElementById('popupClose');
+
+        function showPopup() {
+            successPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup() {
+            successPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        popupClose.addEventListener('click', closePopup);
+
+        // Close popup on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && successPopup.classList.contains('active')) {
+                closePopup();
+            }
+        });
+
+        // Close popup when clicking outside content
+        successPopup.addEventListener('click', (e) => {
+            if (e.target === successPopup) {
+                closePopup();
+            }
+        });
+
         // Contact Form Submission
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Get form data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
-            
+
             // Here you would typically send the data to a server
             console.log('Form submitted:', formData);
-            
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-            
+
+            // Show success popup instead of alert
+            showPopup();
+
             // Reset form
             contactForm.reset();
-            
+
             // Add some animation to the button
             const submitBtn = contactForm.querySelector('.cta-button');
             submitBtn.textContent = 'Message Sent!';
             submitBtn.style.background = 'linear-gradient(90deg, #34a853, #2c8a47)';
-            
+
             setTimeout(() => {
                 submitBtn.textContent = 'Send Message';
                 submitBtn.style.background = '';
@@ -2781,18 +3011,18 @@
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
-            
+
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (window.scrollY >= (sectionTop - 150)) {
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
@@ -2806,7 +3036,7 @@
             // Trigger initial animations
             const heroSection = document.querySelector('.hero');
             heroSection.classList.add('visible');
-            
+
             // Animate stats with counting effect
             const statNumbers = document.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
@@ -2830,7 +3060,7 @@
             const scrolled = window.scrollY;
             const heroContent = document.querySelector('.hero-content');
             const heroImage = document.querySelector('.hero-image');
-            
+
             if (heroContent && heroImage && scrolled < window.innerHeight) {
                 heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
                 heroImage.style.transform = `translateY(${scrolled * 0.05}px)`;
@@ -2838,4 +3068,5 @@
         });
     </script>
 </body>
+
 </html>

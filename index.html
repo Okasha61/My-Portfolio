@@ -255,6 +255,14 @@
             animation-delay: 2.0s;
         }
 
+        .nav-links a:nth-child(6) {
+            animation-delay: 2.1s;
+        }
+
+        .nav-links a:nth-child(7) {
+            animation-delay: 2.2s;
+        }
+
         @keyframes fadeInDown {
             to {
                 opacity: 1;
@@ -297,7 +305,7 @@
             box-shadow: var(--shadow);
             opacity: 0;
             transform: translateY(-10px);
-            animation: fadeInDown 0.5s forwards 2.1s;
+            animation: fadeInDown 0.5s forwards 2.3s;
         }
 
         .toggle-circle {
@@ -677,6 +685,141 @@
             to {
                 clip-path: inset(0 0 0 0);
             }
+        }
+
+        .cv-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 20px 0 40px 0;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cv-download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(58, 134, 255, 0.3);
+        }
+
+        /* Education & Experience Sections */
+        .education-container,
+        .experience-container,
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .education-item,
+        .experience-item,
+        .testimonial-card {
+            background: var(--bg-card);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .education-item.visible,
+        .experience-item.visible,
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .education-item:hover,
+        .experience-item:hover,
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .education-item:hover,
+        .dark-mode .experience-item:hover,
+        .dark-mode .testimonial-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .education-item h3,
+        .experience-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .education-duration,
+        .experience-duration {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .education-details,
+        .experience-details {
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .client-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .client-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #FFD700;
+            margin: 10px 0;
+        }
+
+        .rating i {
+            margin-right: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 10px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 10px;
         }
 
         .stats-container {
@@ -1898,7 +2041,7 @@
         @media (max-width: 768px) {
             .mobile-toggle {
                 display: block;
-                animation: mobileToggleFade 0.5s ease 2.1s both;
+                animation: mobileToggleFade 0.5s ease 2.3s both;
             }
 
             @keyframes mobileToggleFade {
@@ -2032,6 +2175,13 @@
                 padding: 5px 15px;
             }
 
+            /* Education & Experience Responsive */
+            .education-item,
+            .experience-item,
+            .testimonial-card {
+                padding: 20px;
+            }
+
             /* Popup Responsive */
             .popup-content {
                 padding: 30px 20px;
@@ -2127,6 +2277,7 @@
             <nav class="nav-links" id="navLinks">
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
+                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
@@ -2187,19 +2338,87 @@
                     My career goal is to work professionally in the industry through a job, while also pursuing
                     freelancing to gain real-world experience, expand my skill set, and deliver impactful digital
                     solutions.<br></p>
+                
+                <!-- CV Download Button -->
+                <a href="cv/MuhammadOkashaResume new.pdf" class="cv-download-btn" id="downloadCV">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+
                 <div class="stats-container">
                     <div class="stat-item">
-                        <div class="stat-number">10+</div>
+                        <div class="stat-number">7+</div>
                         <p class="stat-label">Projects Completed</p>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">2+</div>
+                        <div class="stat-number">1+</div>
                         <p class="stat-label">Years Experience</p>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <p class="stat-label">Technologies Used</p>
+                        <div class="stat-number">20+</div>
+                        <p class="stat-label">Happiest Client</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2 class="section-title">My Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3>Matriculation (Science)</h3>
+                    <div class="education-duration">
+                        <i class="far fa-calendar"></i> 2018 - 2020
+                    </div>
+                    <p class="education-details">
+                        Completed Matriculation with Science subjects from a recognized board. Focused on Physics, Chemistry, Mathematics, and Computer Science which laid the foundation for technical education.
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Intermediate (Pre-Engineering)</h3>
+                    <div class="education-duration">
+                        <i class="far fa-calendar"></i> 2020 - 2022
+                    </div>
+                    <p class="education-details">
+                        Completed Intermediate in Pre-Engineering with focus on Mathematics, Physics, and Chemistry. Developed strong analytical and problem-solving skills during this period.
+                    </p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Diploma in Web Development (Aptech)</h3>
+                    <div class="education-duration">
+                        <i class="far fa-calendar"></i> 2023 - Present
+                    </div>
+                    <p class="education-details">
+                        Currently pursuing professional diploma in Web Development from Aptech. Learning modern web technologies including HTML5, CSS3, JavaScript, Bootstrap, Tailwind CSS, and backend fundamentals. Working on practical projects to build portfolio and gain hands-on experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <h3>Freelance Web Developer</h3>
+                    <div class="experience-duration">
+                        <i class="far fa-calendar"></i> 2022 - Present
+                    </div>
+                    <p class="experience-details">
+                        Working as a freelance web developer, creating responsive websites for small businesses and individuals. Specializing in frontend development using modern technologies. Collaborating with clients to understand requirements and deliver tailored web solutions.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Personal Projects Developer</h3>
+                    <div class="experience-duration">
+                        <i class="far fa-calendar"></i> 2022 - Present
+                    </div>
+                    <p class="experience-details">
+                        Developing and maintaining personal projects including Sports Club Website, Music Platform, and Fitness Website. Focusing on clean code, responsive design, and user experience. Continuously learning and implementing new web technologies.
+                    </p>
                 </div>
             </div>
         </section>
@@ -2360,6 +2579,8 @@
             </div>
         </section>
 
+        
+
         <!-- Projects Section with Image Gallery -->
         <section id="projects">
             <h2 class="section-title">My Projects</h2>
@@ -2494,6 +2715,72 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">JS</div>
+                        <div class="client-info">
+                            <h4>John Smith</h4>
+                            <p>CEO, Tech Solutions Inc.</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "Working with Muhammad on our Sports Club website was exceptional. He delivered a responsive, modern design that perfectly captured our vision. His attention to detail and communication throughout the project was outstanding."
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">SA</div>
+                        <div class="client-info">
+                            <h4>Sarah Ahmed</h4>
+                            <p>Founder, MusicBeat Studio</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "The SOUND Music Platform Muhammad created for us exceeded our expectations. The user interface is intuitive, the performance is smooth, and the design is visually stunning. He was professional, met all deadlines, and incorporated our feedback perfectly."
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">RK</div>
+                        <div class="client-info">
+                            <h4>Robert Khan</h4>
+                            <p>Owner, Elite Fitness Gym</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "The Solo Leveling inspired fitness website Muhammad developed is truly unique and engaging. His creativity combined with technical skills resulted in a website that stands out. The animations are smooth, and the overall user experience is fantastic."
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -2685,6 +2972,21 @@
             });
         });
 
+      document.getElementById("downloadCV").addEventListener("click", function (e) {
+    e.preventDefault(); // page reload stop
+
+    const fileUrl = "cv/Muhammad-Okasha-CV.pdf"; // CV path
+    const fileName = "Muhammad-Okasha-CV.pdf";
+
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = fileName;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
         // Section Visibility Observer
         const observerOptions = {
             threshold: 0.1,
@@ -2717,6 +3019,30 @@
                     statItems.forEach((item, index) => {
                         setTimeout(() => {
                             item.classList.add('visible');
+                        }, index * 200);
+                    });
+
+                    // Animate education items
+                    const educationItems = entry.target.querySelectorAll('.education-item');
+                    educationItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, index * 200);
+                    });
+
+                    // Animate experience items
+                    const experienceItems = entry.target.querySelectorAll('.experience-item');
+                    experienceItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('visible');
+                        }, index * 200);
+                    });
+
+                    // Animate testimonial cards
+                    const testimonialCards = entry.target.querySelectorAll('.testimonial-card');
+                    testimonialCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('visible');
                         }, index * 200);
                     });
 
